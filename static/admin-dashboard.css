@@ -1,0 +1,116 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial;
+}
+
+body {
+    margin: 0;
+    background: black;
+}
+.logo span {
+    color: red;
+}
+.dashboard {
+    display: flex;
+    height: 100vh;
+}
+
+/* SIDEBAR */
+
+.sidebar {
+    width: 230px;
+    background: #00020a;
+    padding: 20px;
+    color: white;
+}
+
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.sidebar button {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 12px;
+    border: none;
+    border-radius: 6px;
+    background: red;
+    color: white;
+    cursor: pointer;
+}
+
+.sidebar button:hover {
+    background: orangered;
+}
+
+/* MAIN */
+
+.main {
+    flex: 1;
+    padding: 20px;
+    color: white;
+}
+
+.section {
+    margin-top: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+/* FORM */
+
+.form-box {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.form-box input {
+    padding: 10px;
+    border-radius: 6px;
+    border: none;
+}
+
+.form-box button {
+    background: green;
+    border: none;
+    color: white;
+    padding: 10px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* TABLE */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #00020a;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+}
+
+th {
+    background: #00020a;
+}
+
+tr:hover {
+    background: #1e293b;
+}
+
+.delete-btn {
+    background:red;
+    border: none;
+    padding: 6px 10px;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}

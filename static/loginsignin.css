@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+     
+}
+
+/* Header Styling */
+
+header {
+    background: black;
+    color: rgb(255, 255, 255);
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+.logo span{
+  color: red;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+nav a:hover {
+    color: red;
+}
+
+/* Form Container */
+.form-container {
+    width: 400px;
+    background: white;
+    padding: 30px;
+    margin: 80px auto;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 2);
+}
+
+.form-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Inputs */
+form input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Button */
+form button {
+    width: 100%;
+    padding: 10px;
+    background: #222;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background:red;
+    color: black;
+}
+
+/* Links */
+form p {
+    text-align: center;
+    margin-top: 15px;
+}
+
+form a {
+    text-decoration: none;
+    color: #222;
+    font-weight: bold;
+}
+
+form a:hover {
+    color: red;
+}

@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CINEMYBOOKING</title>
+
+    <!-- Flask Static CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='movieticket.css') }}">
+</head>
+
+<body>
+
+<!-- Top Navbar -->
+<header class="navbar">
+
+    <div class="logo">CINE<span>MY</span>BOOKING</div>
+
+    <input type="text" id="search" placeholder="Search for Movies">
+
+    <!-- Flask Routing Links -->
+    <button class="Admin">
+        <a href="{{ url_for('admin') }}">Admin</a>
+    </button>
+
+    <button class="Login">
+        <a href="{{ url_for('login') }}">Login</a>
+    </button>
+
+    <button class="signup">
+        <a href="{{ url_for('signup') }}">Sign Up</a>
+    </button>
+<button class="aboutus">
+        <a href="{{ url_for('aboutus') }}">Aboutus</a>
+    </button>
+</header>
+
+<!-- Category Bar -->
+
+
+<!-- Banner -->
+<section class="banner-slider">
+
+    <div class="slide active">
+        <div class="banner-content">
+            <h1>Book Tickets Instantly🚀</h1>
+            <p>Enjoy Blockbusters With Friends🍿</p>
+            <p>The Conjuring-4</p>
+            <p>Time:2.00pm-4.00pm</p>
+            <button class="banner-btn" onclick="goToMovies()">Book Now</button>
+
+        </div>
+    </div>
+    <div class="slide active">
+        <div class="banner-content">
+              <h1>Experience Like Never🎬</h1>
+            <p>Premium Seats • Dolby Sound • Big Screen</p>
+             <p>Chhava</p>
+            <p>Time:4.00pm-6.00pm</p>
+            <button class="banner-btn" onclick="goToMovies()">Book Now</button>
+
+        </div>
+    </div>
+    <div class="slide active">
+        <div class="banner-content">
+            <h1>Fast & Secure Booking⚡</h1>
+            <p>Choose Seats • Instant Confirmation</p>
+             <p>The K.G.F</p>
+            <p>Time:8.00pm-10.00pm</p>
+            <button class="banner-btn" onclick="goToMovies()">Book Now</button>
+
+        </div>
+    </div>
+    <div class="slide active">
+        <div class="banner-content">
+            <h1>Action-thriller⚡</h1>
+            <p>Choose Seats • Instant Confirmation</p>
+             <p>Dhurandhar</p>
+            <p>Time:2.30pm-5.00pm</p>
+            <button class="banner-btn" onclick="goToMovies()">Book Now</button>
+
+        </div>
+    </div>
+<div class="slide active">
+        <div class="banner-content">
+            <h1>Book Tickets Instantly🚀</h1>
+            <p>Enjoy Blockbusters With Friends🍿</p>
+             <p>Rustom</p>
+            <p>Time:2.00pm-4.00pm</p>
+            <button class="banner-btn" onclick="goToMovies()">Book Now</button>
+
+        </div>
+    </div>
+    <div class="slide">
+        <div class="banner-content">
+            <h1>Horror/Thriller</h1>
+            <p>Premium Seats • Dolby Sound • Big Screen</p>
+             <p>The Conjuring</p>
+            <p>Time:8.00pm-10.00pm</p>
+            <button class="banner-btn" onclick="goToMovies()">Explore Movies</button>
+
+        </div>
+    </div>
+
+    <div class="slide">
+        <div class="banner-content">
+            <h1>Fast & Secure Booking⚡</h1>
+            <p>Choose Seats • Instant Confirmation</p>
+             <p>Oppenhiemer</p>
+            <p>Time:2.00pm-4.00pm</p>
+            <button class="banner-btn" onclick="goToMovies()">Start Booking</button>
+
+        </div>
+    </div>
+
+</section>
+
+
+<!-- Movies Section -->
+<section class="movies" id="recommended">
+
+
+    <h2>Recommended Movies</h2>
+
+    <div class="movie-container" id="movieList">
+
+        <div class="movie-card" data-name="Jawan">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyfiadKTmlfcNBEA3oANJKmFbTprxdED7BlQ&s">
+            <h3>Jawan</h3>
+            <p>Action / Drama</p>
+            <button onclick="bookMovie('Jawan')">Book Tickets</button>
+        </div>
+
+        <div class="movie-card" data-name="Avatar">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbeaEbI10m2rV0mLbd6ds61-65D751FAa5SA&s">
+            <h3>Avatar </h3>
+            <p>Sci-Fi / Adventure</p>
+            <button onclick="bookMovie('Avatar ')">Book Tickets</button>
+        </div>
+
+        <div class="movie-card" data-name="Black Hawk Down">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpCFBAXXR6sqBlCLZr07ujlqHzTURo1pmevg&s">
+            <h3>Black Hawk Down</h3>
+            <p>Action / Thriller</p>
+            <button onclick="bookMovie('Black Hawk Down')">Book Tickets</button>
+        </div>
+<div class="movie-card" data-name="Dhurandhar ">
+            <img src="https://images.fandango.com/ImageRenderer/820/0/redesign/static/img/default_poster.png/0/images/masterrepository/fandango/243483/Dhurandhar.jpg">
+            <h3>Dhurandhar</h3>
+            <p>Spy-action thriller</p>
+            <button onclick="bookMovie('Dhurandhar')">Book Tickets</button>
+        </div>
+        <div class="movie-card" data-name="Rustom">
+            <img src="https://m.media-amazon.com/images/M/MV5BMzFmNGQ0MTctYTk1ZC00YWZlLWIyMWUtODUxOTJjMGFjYmZhXkEyXkFqcGc@._V1_.jpg">
+            <h3>Rustom</h3>
+            <p>crime thriller / Drama</p>
+            <button onclick="bookMovie('Rustom')">Book Tickets</button>
+        </div>
+        <div class="movie-card" data-name="M.S.Dhoni:The Untold Story">
+            <img src="https://m.media-amazon.com/images/M/MV5BM2UwZTNkMmItYmYzOS00MTk3LTg3NDgtNzg5ZjYxNTIzNzY4XkEyXkFqcGc@._V1_.jpg">
+            <h3>M.S.Dhoni:The Untold Story</h3>
+            <p>biographical</p>
+            <button onclick="bookMovie('M.S.Dhoni:The Untold Story')">Book Tickets</button>
+        </div>
+        <div class="movie-card" data-name="The Conjuring">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbFBKuo7dQ1MLI7kOnO_mPZBSHmoTS9xelTA&s">
+            <h3>The Conjuring</h3>
+            <p>Horror</p>
+            <button onclick="bookMovie('The Conjuring')">Book Tickets</button>
+        </div>
+ <div class="movie-card" data-name="The Conjuring 4">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsC7gglucRuras7D1v6Qd-emZD62IzNXZRdQ&s">
+            <h3>The Conjuring 4</h3>
+            <p>Horror</p>
+            <button onclick="bookMovie('The Conjuring 4')">Book Tickets</button>
+        </div>
+        <div class="movie-card" data-name="Oppenheimer">
+            <img src="https://oberrated.wordpress.com/wp-content/uploads/2024/03/opp.jpg">
+            <h3>Oppenheimer</h3>
+            <p>Biography</p>
+            <button onclick="bookMovie('Oppenheimer')">Book Tickets</button>
+        </div>
+
+        <div class="movie-card" data-name="Double Dhamaal">
+            <img src="https://m.media-amazon.com/images/M/MV5BMzEwNjIxOTI4NV5BMl5BanBnXkFtZTcwODk0ODg0NQ@@._V1_FMjpg_UX1000_.jpg">
+            <h3>Double Dhamaal</h3>
+            <p>Comedy</p>
+            <button onclick="bookMovie('Double Dhamaal')">Book Tickets</button>
+        </div>
+         <div class="movie-card" data-name="Bahubali 2:The Conclusion">
+            <img src="https://upload.wikimedia.org/wikipedia/en/9/93/Baahubali_2_The_Conclusion_poster.jpg">
+            <h3>Bahubali 2</h3>
+             <p>Action / Historical Fiction</p>
+            <button onclick="bookMovie('Bahubali 2')">Book Tickets</button>
+        </div>
+         <div class="movie-card" data-name="Chhaava">
+            <img src="https://in.bmscdn.com/events/moviecard/ET00435875.jpg">
+            <h3>Chhaava</h3>
+             <p>Biography</p>
+            <button onclick="bookMovie('Chhaava')">Book Tickets</button>
+        </div>
+         <div class="movie-card" data-name="R.R.R">
+            <img src="https://s3.amazonaws.com/nightjarprod/content/uploads/sites/249/2023/05/01103204/rrr-scaled.jpg">
+            <h3>RRR</h3>
+            <p>Action / Historical Fiction</p>
+            <button onclick="bookMovie('RRR')">Book Tickets</button>
+        </div>
+         <div class="movie-card" data-name="K.G.F">
+            <img src="https://m.media-amazon.com/images/M/MV5BM2M0YmIxNzItOWI4My00MmQzLWE0NGYtZTM3NjllNjIwZjc5XkEyXkFqcGc@._V1_.jpg">
+            <h3>K.G.F</h3>
+            <p>Action / Drama</p>
+            <button onclick="bookMovie('K.G.F')">Book Tickets</button>
+        </div>
+         <div class="movie-card" data-name="Pushpa 2">
+            <img src="https://i.pinimg.com/736x/31/b1/ea/31b1ea4c9e3d8302460b69f00e31c74a.jpg">
+            <h3>Pushpa 2</h3>
+            <p>Action-thriller drama</p>
+            <button onclick="bookMovie('Pushpa 2')">Book Tickets</button>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Seat Booking Section -->
+<section class="seat-booking" id="seatSection" style="display:none;">
+
+    <h2 id="selectedMovie"></h2>
+
+    <div class="screen">SCREEN</div>
+
+    <div class="seats">
+
+        <div class="row">
+             <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat occupied"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+             <div class="seat"></div>
+            <div class="seat"></div>
+        </div>
+
+        <div class="row">
+            <div class="seat"></div>
+            <div class="seat"></div>
+             <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat occupied"></div>
+            <div class="seat"></div>
+             <div class="seat"></div>
+            <div class="seat"></div>
+             <div class="seat occupied"></div>
+            <div class="seat"></div>
+        </div>
+
+        <div class="row">
+          <div class="seat occupied"></div>
+            <div class="seat"></div>
+             <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat occupied"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+             <div class="seat"></div>
+            <div class="seat"></div>
+             <div class="seat"></div>
+            <div class="seat"></div>
+          <div class="seat occupied"></div>
+            <div class="seat"></div>
+        </div>
+
+    </div>
+    
+<select id="city">
+    <option value="">Choose City</option>
+    <option>Connaught Place</option>
+    <option>Yamuna Vihar</option>
+    <option>Ghaziabad</option>
+    <option>Dilshad Garden</option>
+    <option>Shiv Vihar</option>
+    <option>Rajendar Nagar</option>
+    <option>Hauz Khas</option>
+</select>
+
+    <div class="summary">
+        <p>Seats Selected: <span id="seatCount">0</span></p>
+        <p>Total Price: ₹<span id="totalPrice">0</span></p>
+    </div>
+
+    <button onclick="confirmBooking()">Confirm Booking</button>
+
+</section>
+
+<footer>
+    <p>© 2026 AWS Capstone Project | CINEMYBOOKING. All rights reserved</p>
+</footer>
+
+<!-- Flask Static JS -->
+<script src="{{ url_for('static', filename='movieticket.js') }}"></script>
+
+</body>
+</html>

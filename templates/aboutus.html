@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About Us | Movie Booking System</title>
+
+    <!-- Flask Static CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='aboutus.css') }}">
+</head>
+<body>
+
+<header>
+    <div class="logo">CINE<span>MY</span>BOOKING</div>
+
+    <nav>
+        <a href="/">Home</a>
+        <a href="/login">Login</a>
+        <a href="/signup">Sign Up</a>
+    </nav>
+</header>
+
+<!-- About Section -->
+<section class="about">
+    <h1>About Us</h1>
+    <p class="subtitle">Your trusted online movie ticket booking platform</p>
+
+    <div class="about-container">
+
+        <div class="about-text">
+            <h2>Who We Are</h2>
+            <p>
+                MovieBook is a modern online movie ticket booking platform designed 
+                to provide users with fast, easy, and secure ticket reservations. 
+                We aim to make your movie experience smooth from booking to watching.
+            </p>
+            <p>
+                Our platform offers real-time seat selection, instant booking confirmation, 
+                and access to the latest movies across multiple theaters.
+            </p>
+        </div>
+
+        <div class="about-image">
+            <img src="https://cdn-icons-png.flaticon.com/512/744/744922.png" alt="Cinema">
+        </div>
+
+    </div>
+</section>
+
+<!-- Stats Section -->
+<section class="stats">
+
+    <div class="stat-box">
+        <h2 class="counter" data-target="50000">0</h2>
+        <p>Happy Customers</p>
+    </div>
+
+    <div class="stat-box">
+        <h2 class="counter" data-target="120">0</h2>
+        <p>Theaters Partnered</p>
+    </div>
+
+    <div class="stat-box">
+        <h2 class="counter" data-target="350">0</h2>
+        <p>Movies Available</p>
+    </div>
+
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>© 2026 AWS Capstone Project | CINEMYBOOKING. All rights reserved</p>
+</footer>
+
+<!-- Flask Static JS -->
+<script src="{{ url_for('static', filename='aboutus.js') }}"></script>
+
+</body>
+</html>

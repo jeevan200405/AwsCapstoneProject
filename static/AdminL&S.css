@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  height: 100vh;
+  background:white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.admin-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.admin-card {
+  background: rgb(255, 255, 255);
+  padding: 30px;
+  width: 400px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 0 30px rgba(0,0,0,0.2);
+}
+
+.admin-card h2 {
+  color: rgb(0, 0, 0);
+  margin-bottom: 5px;
+}
+
+.admin-card p {
+  color: #352e2e;
+  font-size: 13px;
+  margin-bottom: 25px;
+}
+
+.admin-card input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+ 
+}
+
+.admin-card button {
+  width: 100%;
+  padding: 10px;
+  background: black;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.admin-card button:hover {
+  background: red;
+}
+
+.error {
+  color: red;
+  font-size: 13px;
+  margin-top: 10px;
+  display: block;
+}
+.switch {
+  margin-top: 15px;
+  font-size: 13px;
+  color: #352e2e;
+}
+
+.switch span {
+  color: black;
+  cursor: pointer;
+  font-weight: bold;
+}
+.switch span:hover {
+  text-decoration: none;
+  color: red;
+}

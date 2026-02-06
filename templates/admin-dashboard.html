@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Admin Dashboard</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='admin-dashboard.css') }}">
+
+</head>
+<body>
+
+<div class="dashboard">
+
+<!-- SIDEBAR -->
+<div class="sidebar">
+    <h2><div class="logo">CINE<span>MY</span>BOOKING</div></h2>
+
+    <button onclick="showSection('movies')">🎬 Movies</button>
+    <button onclick="showSection('users')">👥 Users</button>
+    <button onclick="logout()">🚪 Logout</button>
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="main">
+
+<h1>Admin Dashboard</h1>
+
+<!-- MOVIES SECTION -->
+<div id="moviesSection" class="section">
+
+<h2>Manage Movies</h2>
+
+<div class="form-box">
+
+<input type="text" id="movieName" placeholder="Movie Name">
+<input type="text" id="movieGenre" placeholder="Movie Discription">
+<input type="text" id="movieTime" placeholder="Show Time">
+
+<button onclick="addMovie()">➕ Add Movie</button>
+
+</div>
+
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Discription</th>
+<th>Time</th>
+<th>Action</th>
+</tr>
+</thead>
+
+<tbody id="movieTable">
+</tbody>
+</table>
+
+</div>
+
+
+<!-- USERS SECTION -->
+<div id="usersSection" class="section hidden">
+
+<h2>Registered Users</h2>
+
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Email</th>
+</tr>
+</thead>
+
+<tbody id="userTable">
+</tbody>
+</table>
+
+</div>
+
+</div>
+</div>
+
+<script src="{{ url_for('static', filename='admin-dashboard.js') }}"></script>
+
+</body>
+</html>
