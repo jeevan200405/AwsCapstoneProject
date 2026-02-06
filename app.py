@@ -53,7 +53,7 @@ dynamodb = boto3.resource("dynamodb", region_name=AWS_REGION)
 users_table = dynamodb.Table("cinemy_users")
 admin_table = dynamodb.Table("cinemy_admins")
 sns = boto3.client("sns", region_name=AWS_REGION)
-SNS_TOPIC_ARN = os.environ.get("SNS_TOPIC_ARN")
+SNS_TOPIC_ARN = os.environ.get("arn:aws:sns:us-east-1:565393037851:aws_capstone_topic")
 
 
 # LOGIN PROTECTION
@@ -284,4 +284,5 @@ def logout():
 if __name__ == "__main__":
     port = int(os.environ.get('PORT', 5000))
     app.run(host="0.0.0.0", port=port, debug=True)
+
 
